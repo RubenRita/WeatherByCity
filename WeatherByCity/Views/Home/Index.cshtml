@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";}
+
+
+<h2>OpenWeather API</h2>
+
+@using (Html.BeginForm("GetWeather", "Home", FormMethod.Get, new { name = "myForm", onsubmit = "validateForm()" }))
+{
+    <div class="col-md-5">
+        <div class="form-horizontal">
+            <p>
+                <label for="country" class="form-label">Select City: </label>
+                @Html.TextBox("city")<input type="submit" value="Search" />
+            </p>
+        </div>
+    </div>
+
+    <h3>@ViewBag.Message</h3>
+}
+
+ 

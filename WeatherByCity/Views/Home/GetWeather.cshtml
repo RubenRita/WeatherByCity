@@ -1,0 +1,89 @@
+﻿@model WeatherByCity.Models.WeatherDetails
+
+@{
+    ViewBag.Title = "GetWeather";
+}
+
+
+
+<div>
+    <h2>Weather in @Model.City</h2>
+    <p>Day @DateTime.Now.ToString("dd/MM/yyyy")</p>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temprature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temprature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempratureMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempratureMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempratureMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempratureMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Humidity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Humidity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainWeather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainWeather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pressure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pressure)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
